@@ -145,3 +145,5 @@ _deps
 *-prefix/
 
 # End of https://www.gitignore.io/api/c++,cmake,clion+all
+/build/
+/main.cpp
