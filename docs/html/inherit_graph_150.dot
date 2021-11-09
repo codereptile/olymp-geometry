@@ -1,0 +1,8 @@
+digraph "Иерархия классов. Графический вид."
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="testing::internal::\lDoubleSequence\< false,\l IndexSequence\< I... \>\l, sizeofT \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structtesting_1_1internal_1_1_double_sequence_3_01false_00_01_index_sequence_3_01_i_8_8_8_01_4_00_01sizeof_t_01_4.html",tooltip=" "];
+}

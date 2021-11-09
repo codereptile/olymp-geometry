@@ -1,0 +1,8 @@
+digraph "Иерархия классов. Графический вид."
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="gtest_test_utils.Subprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgtest__test__utils_1_1_subprocess.html",tooltip=" "];
+}

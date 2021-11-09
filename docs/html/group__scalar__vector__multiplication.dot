@@ -1,0 +1,9 @@
+digraph "Скалярное умножение векторов"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node1 [label="Скалярное\l умножение\l векторов",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Скалярное умножение."];
+  Node2 [label="Умножение\l векторов",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__vector__multiplication.html",tooltip="Предоставляет скалярное и векторное умножение над векторами."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+}

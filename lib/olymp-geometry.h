@@ -123,7 +123,6 @@ namespace olymp_geometry {
     \brief Предоставляет скалярное и векторное умножение над векторами.
     */
     ///@{
-    ///@}
 
     /*!
     \defgroup scalar_vector_multiplication Скалярное умножение векторов
@@ -152,6 +151,7 @@ namespace olymp_geometry {
 
     long double VectorMultiplication(Vector &&a, Vector &&b);
     ///@}
+    ///@}
 
     /*!
     \defgroup angles Работа с углами
@@ -170,6 +170,13 @@ namespace olymp_geometry {
     long double AngleCos(const Vector &a, Vector &&b);
 
     long double AngleCos(Vector &&a, Vector &&b);
+
+    /*!
+    Даёт угол между векторами через скалярное умножение.
+    \param[in] a Первый вектор
+    \param[in] b Второй вектор
+    \return Угол между a и b в радианах
+    */
 
     long double Angle(const Vector &a, const Vector &b);
 
@@ -193,6 +200,7 @@ namespace olymp_geometry {
     long double RadToDeg(long double x);
 
     /*!
+    \ingroup angles
     Проверяет, находится ли вектор m между векторами a и b.
     \param[in] a Первый вектор задающий угол - a
     \param[in] b Второй вектор задающий угол - b
@@ -215,9 +223,20 @@ namespace olymp_geometry {
     bool IsBetween(Vector &&a, Vector &&b, const Vector &m);
 
     bool IsBetween(Vector &&a, Vector &&b, Vector &&m);
-
     ///@}
 
+    /*!
+    \defgroup relative_position Взаимное положение
+    \brief Содержит методы для работы с взаимным положением объектов.
+    */
+    ///@{
+
+    /*!
+    \defgroup lies_on Принадлежность
+    \ingroup relative_position
+    \brief Содержит методы позволяющие узнать, принадлежит ли один объект другому.
+    */
+    ///@{
     bool LiesOn(const Segment &segment, const Vector &v);
 
     bool LiesOn(const Segment &segment, Vector &&v);
@@ -225,6 +244,59 @@ namespace olymp_geometry {
     bool LiesOn(Segment &&segment, const Vector &v);
 
     bool LiesOn(Segment &&segment, Vector &&v);
+    ///@}
+
+    /*!
+    \defgroup intersection Пересечение
+    \ingroup relative_position
+    \brief Модуль для нахождения пересечений объектов
+    */
+    ///@{
+    bool Intersect(const Segment &s1, const Segment &s2);
+
+    bool Intersect(const Segment &s1, Segment &&s2);
+
+    bool Intersect(Segment &&s1, Segment &&s2);
+    ///@}
+
+    /*!
+    \defgroup other_relative_position Прочее
+    \ingroup relative_position
+    \brief Содержит такие методы, как 'лежат ли точки по разные стороны от прямой'.
+    */
+    ///@{
+    bool OnSameSideEq(const Line &line, const Vector &a, const Vector &b);
+
+    bool OnSameSideEq(const Line &line, const Vector &a, Vector &&b);
+
+    bool OnSameSideEq(const Line &line, Vector &&a, Vector &&b);
+
+    bool OnSameSideEq(Line &&line, const Vector &a, const Vector &b);
+
+    bool OnSameSideEq(Line &&line, const Vector &a, Vector &&b);
+
+    bool OnSameSideEq(Line &&line, Vector &&a, Vector &&b);
+
+    bool OnSameSide(const Line &line, const Vector &a, const Vector &b);
+
+    bool OnSameSide(const Line &line, const Vector &a, Vector &&b);
+
+    bool OnSameSide(const Line &line, Vector &&a, Vector &&b);
+
+    bool OnSameSide(Line &&line, const Vector &a, const Vector &b);
+
+    bool OnSameSide(Line &&line, const Vector &a, Vector &&b);
+
+    bool OnSameSide(Line &&line, Vector &&a, Vector &&b);
+
+    ///@}
+    ///@}
+
+    /*!
+    \defgroup distances Расстояния
+    \brief Предоставляет различные функции для работы с расстояниями.
+    */
+    ///@{
 
     long double Dist(const Vector &a, const Vector &b);
 
@@ -256,35 +328,9 @@ namespace olymp_geometry {
 
     long double Dist(Segment &&segment, Vector &&v);
 
-    bool OnSameSideEq(const Line &line, const Vector &a, const Vector &b);
+    ///@}
 
-    bool OnSameSideEq(const Line &line, const Vector &a, Vector &&b);
 
-    bool OnSameSideEq(const Line &line, Vector &&a, Vector &&b);
-
-    bool OnSameSideEq(Line &&line, const Vector &a, const Vector &b);
-
-    bool OnSameSideEq(Line &&line, const Vector &a, Vector &&b);
-
-    bool OnSameSideEq(Line &&line, Vector &&a, Vector &&b);
-
-    bool OnSameSide(const Line &line, const Vector &a, const Vector &b);
-
-    bool OnSameSide(const Line &line, const Vector &a, Vector &&b);
-
-    bool OnSameSide(const Line &line, Vector &&a, Vector &&b);
-
-    bool OnSameSide(Line &&line, const Vector &a, const Vector &b);
-
-    bool OnSameSide(Line &&line, const Vector &a, Vector &&b);
-
-    bool OnSameSide(Line &&line, Vector &&a, Vector &&b);
-
-    bool Intersect(const Segment &s1, const Segment &s2);
-
-    bool Intersect(const Segment &s1, Segment &&s2);
-
-    bool Intersect(Segment &&s1, Segment &&s2);
 }
 
 

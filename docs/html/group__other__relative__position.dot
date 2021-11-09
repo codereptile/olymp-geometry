@@ -1,0 +1,9 @@
+digraph "Прочее"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node1 [label="Прочее",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Содержит такие методы, как 'лежат ли точки по разные стороны от прямой'."];
+  Node2 [label="Взаимное положение",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__relative__position.html",tooltip="Содержит методы для работы с взаимным положением объектов."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+}
